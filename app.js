@@ -3,12 +3,12 @@ var arr = [
     {
         x: 50,
         y: 50,
-        label: 'I am Groot'
+        label: 'I am Groot!'
     },
     {
         x: 150,
         y: 50,
-        label: 'I am Racoon'
+        label: 'I am Rocket'
     },
     {
         x: 250,
