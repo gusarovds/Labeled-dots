@@ -1,4 +1,3 @@
-
 var arr = [
     {
         x: 50,
@@ -47,7 +46,7 @@ class ChartDot extends React.Component {
     render() {
         return (
             <circle cx={this.x} cy={this.y} r={4} className={'dot'}></circle>
-    );
+        );
     }
 }
 
@@ -79,14 +78,14 @@ class Axes extends React.Component {
         let ynums = this.getYNums();
         return(
             <svg>
-            <line x1={20} y1={this.len-20} y2={this.len - 20} x2={this.len - 20} className={"Axe"}/>
-            <line x1={20} y1={this.len-20} y2={20} x2={20} className={"Axe"}/>
-            <text x={this.len-40} y={this.len-10}>x</text>
-        <text x={10} y={40} >y</text>
-            {xnums}
-        {ynums}
-    </svg>
-    );
+                <line x1={20} y1={this.len-20} y2={this.len - 20} x2={this.len - 20} className={"Axe"}/>
+                <line x1={20} y1={this.len-20} y2={20} x2={20} className={"Axe"}/>
+                <text x={this.len-40} y={this.len-10}>x</text>
+                <text x={10} y={40} >y</text>
+                {xnums}
+                {ynums}
+            </svg>
+        );
     }
 }
 
@@ -101,7 +100,7 @@ class Label extends React.Component {
     render() {
         return (
             <text x={this.x} y={this.y} fontSize={11} textAnchor={"middle"} className={'label'}>{this.value}</text>
-    );
+        );
     }
 }
 
@@ -112,8 +111,8 @@ class MainChart extends React.Component {
     }
 
     isOverlapped(r1, r2) {
-        let r1 = r1.getBoundingClientRect();
-        let r2 = r2.getBoundingClientRect();
+        var r1 = r1.getBoundingClientRect();
+        var r2 = r2.getBoundingClientRect();
 
 
         return !(r2.left > r1.right ||
@@ -159,11 +158,11 @@ class MainChart extends React.Component {
 
         return (
             <svg width={this.len} height={this.len} className={"mainChart"}>
-            <Axes len={this.len}/>
-        {this.getDotsOnChart()}
-        {this.getLabelsOnChart()}
-    </svg>
-    );
+                <Axes len={this.len}/>
+                {this.getDotsOnChart()}
+                {this.getLabelsOnChart()}
+            </svg>
+        );
     }
 
     componentDidMount() {
@@ -174,6 +173,6 @@ class MainChart extends React.Component {
 
 
 ReactDOM.render(
-<MainChart />,
+    <MainChart />,
     document.getElementById('root')
 );
