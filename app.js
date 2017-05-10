@@ -8,7 +8,7 @@ var arr = [
     {
         x: 150,
         y: 50,
-        label: 'I am Rocket'
+        label: 'I am Rocket!'
     },
     {
         x: 250,
